@@ -1,0 +1,18 @@
+export { default as css } from "./css-logo.svg?url";
+export { default as ts } from "./typescript-logo.svg?url";
+export { default as python } from "./python-logo.svg?url";
+export { default as django } from "./django-logo.svg?url";
+export { default as postgres } from "./postgre-sql-logo.svg?url";
+export { default as react } from "./react-icon.svg?url";
+export { default as git } from "./git-logo-svg.svg?url";
+export { default as mongo } from "./mongo-db-logo.svg?url";
+export {default as node} from "./nodejs-logo.svg?url";
+export {default as redux} from "./redux-logo.svg?url";
+export {default as cloudinary} from "./cloudinary-logo.svg?url";
+export {default as javascript} from "./javascript-logo.svg?url";
+export {default as postman} from "./postman-logo.svg?url";
+export {default as reduxSaga} from "./redux-saga.svg?url";
+export {default as sass} from "./sass-logo.svg?url";
+export {default as tailwind} from "./tailwindcss-logo.svg?url";
+export { default as docker } from "./docker-logo.svg?url";
+export { default as firebase } from "./google-firebase-logo.svg?url";
