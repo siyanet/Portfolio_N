@@ -121,7 +121,7 @@ export default function Hero() {
                 
                 <div className="h-[240px] w-[240px] overflow-hidden rounded-[1.5rem] sm:h-[320px] sm:w-[320px] sm:rounded-[2rem] lg:h-[380px] lg:w-[380px] lg:rounded-full">
                   <img
-                    src="/images/profile.png"
+                    src="../../src/assets/profilePhoto.jpg"
                     alt="Siyanet Getahun"
                     className="h-full w-full object-cover"
                   />

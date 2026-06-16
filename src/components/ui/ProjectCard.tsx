@@ -26,18 +26,31 @@ export default function ProjectCard({ title, images, slug }: ProjectCardProps) {
     <div className="overflow-hidden rounded-3xl border border-border bg-card/40 backdrop-blur-xl">
       {/* IMAGE SLIDER */}
       <div className="relative h-[700px] overflow-hidden sm:h-[440px] lg:h-[520px]">
-        <AnimatePresence initial={false}>
+        <AnimatePresence initial={false} mode="popLayout">
           <motion.img
             key={images[currentIndex]}
             src={images[currentIndex]}
             alt={title}
+            // loading="eager" and fetchpriority="high" ensures the current image is prioritized
+            loading="eager"
+            decoding="async"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
-            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1]}}
+            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
             className="absolute inset-0 h-full w-full object-contain"
           />
         </AnimatePresence>
+
+        {/* PRELOADER: Silently loads the next image in the background to avoid flickering */}
+        {images.length > 1 && (
+          <img
+            key={`preload-${(currentIndex + 1) % images.length}`}
+            src={images[(currentIndex + 1) % images.length]}
+            style={{ display: "none" }}
+            aria-hidden="true"
+          />
+        )}
 
         {/* Overlay */}
         {/* <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" /> */}

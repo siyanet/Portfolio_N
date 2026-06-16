@@ -2,18 +2,17 @@
 
 import { motion } from "framer-motion";
 import Header from "../components/layout/Header";
+import { Certificates } from "../assets/certificates";
 
 type Experience = {
   role: string;
   company: string;
-  period: string;
   description: string;
 };
 
 type Education = {
   degree: string;
   school: string;
-  period: string;
   description: string;
 };
 
@@ -24,27 +23,51 @@ type Certificate = {
 
 const experiences: Experience[] = [
   {
-    role: "Full Stack Developer",
-    company: "Addis Software",
-    period: "2025 — Present",
+    role: "Full Stack Software Engineer",
+    company: "Swenetix (formerly Addis Software)",
+  
     description:
-      "Developing scalable enterprise systems, operational dashboards, ERP workflows, and production-grade web applications using React, TypeScript, Django, and PostgreSQL.",
+      "Contributing to scalable multi-product systems including an electric mobility platform. Developing and maintaining full-stack applications integrating APIs, improving system performance, and collaborating with cross-functional teams on core product features and architecture decisions.",
   },
 
   {
-    role: "Frontend Engineer",
-    company: "Freelance",
-    period: "2024 — 2025",
+    role: "Full Stack Software Engineer",
+    company: "Seamless Technology",
+
     description:
-      "Built responsive frontend systems, booking platforms, admin dashboards, and modern UI architectures focused on maintainability and scalability.",
+      "Worked on large-scale health and public-sector data platforms. Refactored OpenIMIS modules to improve maintainability, aligned frontend-backend API contracts, and contributed to NHDD platform UI consistency, validation workflows, and performance optimization.",
+  },
+
+  {
+    role: "Frontend Developer & UI/UX Designer",
+    company: "Kuraz Tech",
+  
+    description:
+      "Built a full restaurant management system using React, Redux, and Tailwind CSS. Developed reusable UI components, responsive layouts, and scalable frontend architecture. Recognized for strong UI/UX contributions and frontend implementation quality.",
+  },
+
+  {
+    role: "Backend Developer",
+    company: "Ewenet Communication PLC",
+  
+    description:
+      "Developed REST APIs using Django REST Framework for service-based applications. Implemented JWT authentication, optimized PostgreSQL performance, and supported secure backend integrations and admin dashboard functionality.",
+  },
+
+  {
+    role: "Software Developer Intern",
+    company: "Tria PLC",
+    
+    description:
+      "Supported QA processes for a Learning Management System. Performed manual and exploratory testing, identified bugs, and contributed to improving system stability and usability through structured feedback loops.",
   },
 ];
+
 
 const education: Education[] = [
   {
     degree: "BSc in Software Engineering",
     school: "Bahir Dar University",
-    period: "2021 — 2026",
     description:
       "Focused on software architecture, distributed systems, databases, algorithms, system design, and modern full-stack engineering.",
   },
@@ -52,18 +75,25 @@ const education: Education[] = [
 
 const certificates: Certificate[] = [
   {
-    title: "React Advanced Development",
-    image: "/images/certificates/react.png",
+    title: "Programming in Python ",
+    image: Certificates[0],
   },
 
   {
-    title: "Backend System Design",
-    image: "/images/certificates/backend.png",
+    title: "Django Framework",
+    image: Certificates[2],
   },
-
-  {
-    title: "Full Stack Engineering",
-    image: "/images/certificates/fullstack.png",
+    {
+    title: "APIS",
+    image: Certificates[3],
+  },
+    {
+    title: "The Full Stack",
+    image: Certificates[4],
+  },
+   {
+    title: "Meta Backend Devloper",
+    image: Certificates[1],
   },
 ];
 
@@ -82,7 +112,7 @@ export default function Resume() {
               Resume
             </p>
 
-            <h2 className="mt-4 text-5xl font-black tracking-tight text-foreground">
+            <h2 className="mt-4 text-4xl font-black tracking-tight text-foreground">
               Experience & Education
             </h2>
 
@@ -107,7 +137,7 @@ export default function Resume() {
                 >
                   <div className="flex flex-wrap items-start justify-between gap-4">
                     <div>
-                      <h4 className="text-2xl font-bold text-foreground">
+                      <h4 className="text-xl font-bold text-foreground">
                         {item.role}
                       </h4>
 
@@ -116,9 +146,7 @@ export default function Resume() {
                       </p>
                     </div>
 
-                    <div className="rounded-full border border-border bg-background/40 px-4 py-2 text-sm text-muted">
-                      {item.period}
-                    </div>
+               
                   </div>
 
                   <p className="mt-6 leading-8 text-muted">
@@ -134,39 +162,6 @@ export default function Resume() {
 
         {/* RIGHT SIDE */}
         <div className="w-full lg:max-w-[420px]">
-
-          {/* DEGREE CARD */}
-          {/* <motion.div
-            whileHover={{ y: -6 }}
-            className="overflow-hidden rounded-[2rem] border border-border bg-card/40 backdrop-blur-xl"
-          >
-            <img
-              src="/images/bdu.jpg"
-              alt="Bahir Dar University"
-              className="h-[260px] w-full object-cover"
-            />
-
-            <div className="p-8">
-              <div className="inline-flex rounded-full border border-border bg-background/40 px-4 py-2 text-sm text-muted">
-                Degree
-              </div>
-
-              <h3 className="mt-6 text-3xl font-black text-foreground">
-                Software Engineering
-              </h3>
-
-              <p className="mt-4 text-lg text-muted">
-                Bahir Dar University
-              </p>
-
-              <p className="mt-6 leading-8 text-muted">
-                Studying modern software engineering principles, scalable
-                systems, distributed applications, and enterprise-grade
-                architecture.
-              </p>
-            </div>
-          </motion.div> */}
-              {/* EDUCATION */}
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-foreground">
               Education
@@ -211,12 +206,12 @@ export default function Resume() {
                 <motion.div
                   key={index}
                   whileHover={{ y: -4 }}
-                  className="overflow-hidden rounded-[2rem] border border-border bg-card/40 backdrop-blur-xl"
+                  className="overflow-hidden py-3 rounded-[2rem] border border-border bg-card/40 backdrop-blur-xl"
                 >
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-[180px] w-full object-cover"
+                    className="h-[180px] w-full object-contain"
                   />
 
                   <div className="p-6">
