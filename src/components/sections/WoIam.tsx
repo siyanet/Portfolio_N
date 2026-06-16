@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="w-full  py-28 px-6 lg:px-16 grid-pattern">
+    <section className="w-full mx-auto    grid-pattern">
        <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -13,7 +13,7 @@ export default function About() {
           >
             Who I Am
           </motion.h2>
-      <div className=" max-w-7xl  grid gap-16 lg:grid-cols-2 items-start">
+      <div className=" ">
          
 
         {/* LEFT SIDE */}
@@ -25,7 +25,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-muted text-lg leading-8 max-w-xl text-center lg:text-left"
+            className="mt-6 text-muted  text-lg leading-8  text-center "
           >
           I am a frontend-heavy full stack software engineer with experience building scalable web platforms, enterprise systems, and modern digital products.
 

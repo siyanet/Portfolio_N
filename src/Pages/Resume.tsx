@@ -99,9 +99,9 @@ const certificates: Certificate[] = [
 
 export default function Resume() {
   return (
-    <section className="w-full  grid-pattern">
+    <section className="w-full   grid-pattern">
         <Header />
-      <div className=" flex max-w-screen-2xl flex-col gap-16 px-6 lg:flex-row">
+      <div className=" flex  flex-col gap-16 px-10 lg:px-15 lg:flex-row">
 
         {/* LEFT SIDE */}
         <div className="flex-1">

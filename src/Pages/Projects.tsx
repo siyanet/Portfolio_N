@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <section className="w-full  grid-pattern">
         <Header/>
-      <div className=" px-6">
+      <div className=" px-10 lg:px-15">
 
         {/* HEADER */}
         <div className="">
