@@ -146,11 +146,32 @@ export default function Hero() {
           </motion.div>
 
           {/* TITLE */}
-          <motion.h1
+         <motion.h1
+  initial={{ opacity: 0, y: 14 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.1 }}
+  className="mt-8 text-2xl font-black leading-tight text-secondary sm:text-2xl w-full  lg:text-2xl "
+>
+  Hello{" "}
+  <motion.span
+    style={{ display: "inline-block" }}
+    animate={{ rotate: [0, 20, -10, 20, 0] }}
+    transition={{
+      duration: 1.2,
+      repeat: Infinity,
+      repeatDelay: 2,
+      ease: "easeInOut",
+    }}
+  >
+    👋
+  </motion.span>
+</motion.h1>
+            
+               <motion.h1
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="mt-8 max-w-2xl text-4xl font-black leading-tight text-secondary sm:text-5xl lg:text-6xl"
+            className=" text-4xl font-black leading-tight text-secondary sm:text-5xl lg:text-5xl"
           >
             I'm Siyanet Getahun
           </motion.h1>
