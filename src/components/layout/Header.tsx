@@ -1,7 +1,7 @@
 // src/components/layout/Header.tsx
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 import ThemeToggle from "../theme/ThemeToggle";
@@ -25,9 +25,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className=" sticky top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
-      <div className="flex h-20 grid-pattern  items-center justify-between ">
-
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         {/* LOGO */}
         <Link
           to="/"
@@ -39,25 +38,32 @@ export default function Header() {
         {/* DESKTOP NAV */}
         <nav className="hidden items-center gap-10 md:flex">
           {navLinks.map((item) => (
-            <Link
+            <NavLink
               key={item.path}
               to={item.path}
-              className="text-sm font-medium text-muted transition-colors duration-300 hover:text-foreground"
+              className={({ isActive }) =>
+                `relative text-sm font-medium transition-colors duration-300 ${
+                  isActive
+                    ? "text-primary after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-primary"
+                    : "text-muted hover:text-foreground"
+                }`
+              }
             >
               {item.name}
-            </Link>
+            </NavLink>
           ))}
 
           <ThemeToggle />
         </nav>
 
         {/* MOBILE ACTIONS */}
-        <div className="flex items-center gap-4 md:hidden z-50">
+        <div className="z-50 flex items-center gap-4 md:hidden">
           <ThemeToggle />
 
           <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="relative  flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card/50 backdrop-blur-xl"
+            className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card/50 backdrop-blur-xl"
+            aria-label="Toggle navigation menu"
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -65,7 +71,7 @@ export default function Header() {
 
         {/* MOBILE MENU */}
         <div
-          className={`fixed  inset-0 transition-all duration-300 md:hidden ${
+          className={`fixed inset-0 transition-all duration-300 md:hidden ${
             isOpen
               ? "pointer-events-auto opacity-100"
               : "pointer-events-none opacity-0"
@@ -79,25 +85,30 @@ export default function Header() {
 
           {/* MENU PANEL */}
           <div
-            className={`absolute right-0 top-0 flex h-screen w-[150px] text-center flex-col border-l border-border bg-background  transition-transform duration-300 ${
+            className={`absolute right-0 top-0 flex h-screen w-[220px] flex-col border-l border-border bg-background transition-transform duration-300 ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="mt-24 flex flex-col gap-8">
+            <div className="mt-24 flex flex-col gap-8 px-6">
               {navLinks.map((item) => (
-                <Link
+                <NavLink
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsOpen(false)}
-                  className="text-lg font-semibold text-foreground transition hover:text-muted"
+                  className={({ isActive }) =>
+                    `text-lg font-semibold transition-colors duration-300 ${
+                      isActive
+                        ? "text-primary"
+                        : "text-foreground hover:text-muted"
+                    }`
+                  }
                 >
                   {item.name}
-                </Link>
+                </NavLink>
               ))}
             </div>
           </div>
         </div>
-
       </div>
     </header>
   );

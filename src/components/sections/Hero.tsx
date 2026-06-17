@@ -84,14 +84,11 @@ const floatingIcons: FloatingIcon[] = [
 
 export default function Hero() {
   return (
-   
-     <section className="relative overflow-hidden px-6 py-16 lg:min-h-[calc(100vh-80px)] lg:px-16">
+    <section className="relative overflow-hidden px-6 py-16 lg:min-h-[calc(100vh-80px)] lg:px-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-20 lg:grid-cols-2">
-         <div className="relative flex items-center justify-center">
-          
+        <div className="relative flex items-center justify-center">
           {/* WRAPPER */}
           <div className="relative flex h-[340px] w-[340px] items-center justify-center sm:h-[420px] sm:w-[420px] lg:h-[620px] lg:w-[620px]">
-
             {/* ICONS */}
             {floatingIcons.map((item, index) => (
               <div
@@ -120,24 +117,22 @@ export default function Hero() {
               className="relative z-10"
             >
               <div className="overflow-hidden border border-border bg-card/40 p-3 backdrop-blur-xl rounded-full">
-                
                 <div className="h-[240px] w-[240px] overflow-hidden rounded-[1.5rem] sm:h-[320px] sm:w-[320px] sm:rounded-[2rem] lg:h-[380px] lg:w-[380px] lg:rounded-full">
                   <img
                     src={profilePhoto1}
                     alt="Siyanet Getahun"
                     className="h-full w-full object-cover"
+                    loading="eager"
+                    fetchPriority="high"
                   />
                 </div>
-
               </div>
             </motion.div>
-
           </div>
         </div>
-        
+
         {/* CONTENT */}
         <div className="relative z-20 flex flex-col items-center text-center lg:items-start lg:text-left">
-          
           {/* BADGE */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -196,9 +191,11 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="mt-8 max-w-2xl text-sm leading-8 text-muted sm:text-base lg:text-lg"
           >
-          Designing and building modern digital products with clean architecture, scalable systems, and user-focused experiences.
-
-Focused on transforming complex workflows into fast, maintainable, and production-ready applications through modern frontend engineering and reliable backend development.
+            Designing and building modern digital products with clean
+            architecture, scalable systems, and user-focused experiences.
+            Focused on transforming complex workflows into fast, maintainable,
+            and production-ready applications through modern frontend
+            engineering and reliable backend development.
           </motion.p>
 
           {/* BUTTONS */}
@@ -214,13 +211,10 @@ Focused on transforming complex workflows into fast, maintainable, and productio
             >
               View Projects
             </Link>
-
-          
           </motion.div>
         </div>
 
         {/* PROFILE + ICONS */}
-       
       </div>
     </section>
   );
