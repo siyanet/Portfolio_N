@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Header from "../components/layout/Header";
 import { projects } from "../data/projects";
+import PageLayout from "../components/layout/PageLayout";
 
 export default function ProjectDetails() {
   const { slug } = useParams();
@@ -37,10 +37,11 @@ export default function ProjectDetails() {
   }
 
   return (
-    <section className="w-full">
-      <Header />
+   <PageLayout>
+     <section className="w-full">
+    
 
-      <div className="mx-auto max-w-screen-2xl px-6 py-10">
+      <div className="">
 
         {/* BACK */}
         <Link
@@ -95,7 +96,7 @@ export default function ProjectDetails() {
           <div className="flex flex-col justify-center">
 
             {/* TITLE */}
-            <h1 className="text-3xl font-black tracking-tight text-foreground lg:text-4xl">
+            <h1 className="text-2xl font-black tracking-tight text-foreground lg:text-4xl">
               {project.title}
             </h1>
 
@@ -212,5 +213,6 @@ export default function ProjectDetails() {
         </div>
       </div>
     </section>
+   </PageLayout>
   );
 }

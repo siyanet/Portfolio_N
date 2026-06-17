@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Header from "../components/layout/Header";
 import { Certificates } from "../assets/certificates";
+import PageLayout from "../components/layout/PageLayout";
 
 type Experience = {
   role: string;
@@ -44,14 +45,6 @@ const experiences: Experience[] = [
   
     description:
       "Built a full restaurant management system using React, Redux, and Tailwind CSS. Developed reusable UI components, responsive layouts, and scalable frontend architecture. Recognized for strong UI/UX contributions and frontend implementation quality.",
-  },
-
-  {
-    role: "Backend Developer",
-    company: "Ewenet Communication PLC",
-  
-    description:
-      "Developed REST APIs using Django REST Framework for service-based applications. Implemented JWT authentication, optimized PostgreSQL performance, and supported secure backend integrations and admin dashboard functionality.",
   },
 
   {
@@ -99,20 +92,33 @@ const certificates: Certificate[] = [
 
 export default function Resume() {
   return (
-    <section className="w-full   grid-pattern">
-        <Header />
-      <div className=" flex  flex-col gap-16 px-10 lg:px-15 lg:flex-row">
+   <PageLayout>
+     <section className="w-full">
+              <div className="w-full flex justify-between items-center">
+  <p className="text-sm font-medium uppercase tracking-[0.25em] text-muted">
+    Resume
+  </p>
+
+  <a
+    href="/Siyanet-Getahun-Resume.pdf"
+    download
+    className="rounded-lg border px-4 py-2 text-sm font-medium transition hover:bg-muted"
+  >
+    Download CV
+  </a>
+</div>
+       
+      <div className=" flex  flex-col gap-16 lg:flex-row">
 
         {/* LEFT SIDE */}
         <div className="flex-1">
 
           {/* HEADER */}
           <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-[0.25em] text-muted">
-              Resume
-            </p>
+   
+           
 
-            <h2 className="mt-4 text-4xl font-black tracking-tight text-foreground">
+            <h2 className="mt-4 text-2xl font-black tracking-tight text-foreground">
               Experience & Education
             </h2>
 
@@ -124,7 +130,7 @@ export default function Resume() {
 
           {/* EXPERIENCE */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-foreground">
+            <h3 className="text-xl font-bold text-foreground">
               Experience
             </h3>
 
@@ -137,7 +143,7 @@ export default function Resume() {
                 >
                   <div className="flex flex-wrap items-start justify-between gap-4">
                     <div>
-                      <h4 className="text-xl font-bold text-foreground">
+                      <h4 className="text-lg font-bold text-foreground">
                         {item.role}
                       </h4>
 
@@ -163,7 +169,7 @@ export default function Resume() {
         {/* RIGHT SIDE */}
         <div className="w-full lg:max-w-[420px]">
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-foreground">
+            <h3 className="text-xl font-bold text-foreground">
               Education
             </h3>
 
@@ -176,7 +182,7 @@ export default function Resume() {
                 >
                   <div className="flex flex-wrap items-start justify-between gap-4">
                     <div>
-                      <h4 className="text-2xl font-bold text-foreground">
+                      <h4 className="text-xl font-bold text-foreground">
                         {item.degree}
                       </h4>
 
@@ -188,7 +194,7 @@ export default function Resume() {
                   </div>
 
                   <p className="mt-6 leading-8 text-muted">
-                    CCP 3.5 GPA
+                    CCGP 3.5 GPA
                   </p>
                 </motion.div>
               ))}
@@ -197,7 +203,7 @@ export default function Resume() {
 
           {/* CERTIFICATES */}
           <div className="mt-8">
-            <h3 className="text-2xl font-bold text-foreground">
+            <h3 className="text-xl font-bold text-foreground">
               Certificates
             </h3>
 
@@ -227,5 +233,6 @@ export default function Resume() {
         </div>
       </div>
     </section>
+   </PageLayout>
   );
 }

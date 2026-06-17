@@ -15,6 +15,7 @@ export type Project = {
   images: string[];
   contributions: string[];
   platforms?: string[];
+  type?: string;
 };
 
 export const projects: Project[] = [
@@ -90,6 +91,7 @@ export const projects: Project[] = [
       "Swapper App",
       "Distributor App",
     ],
+    type: "mobile",
   },
   {
     slug: "eliita-erp-system",

@@ -9,6 +9,7 @@ import About from "../components/sections/WoIam";
 const Home = () => {
   return (
     <PageLayout>
+    
         <div>
              <Hero />
         <About/>
@@ -17,8 +18,9 @@ const Home = () => {
         <Contact/>
 
         </div>
+        </PageLayout>
        
-    </PageLayout>
+  
   );
 };
 

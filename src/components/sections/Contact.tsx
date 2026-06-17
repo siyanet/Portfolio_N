@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { SiGithub, SiLinkerd, SiGmail } from "react-icons/si";
-
+import { SiGithub, SiGmail } from "react-icons/si";
+import { FaLinkedinIn } from "react-icons/fa";
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -39,20 +39,20 @@ ${form.message}
   };
 
   return (
-    <section className="w-full py-28 grid-pattern">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="w-full py-5">
+      <div >
 
         {/* HEADER */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-black text-foreground"
+          className="text-2xl text-center lg:text-center font-black text-foreground"
         >
           Let’s Work Together
         </motion.h2>
 
-        <p className="mt-4 max-w-2xl text-muted">
+        <p className="mt-4 text-center lg:text-right text-muted">
           Have a project, opportunity, or idea? I’m open to discussing
           full-stack development, scalable systems, and impactful digital
           products.
@@ -153,7 +153,7 @@ ${form.message}
                 aria-label="LinkedIn"
                 className="rounded-xl border border-border bg-card/40 p-4 transition hover:bg-card/60"
               >
-                <SiLinkerd className="text-2xl text-foreground" />
+                <FaLinkedinIn className="text-2xl text-foreground" />
               </a>
 
               <a

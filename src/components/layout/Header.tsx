@@ -25,15 +25,15 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="px-6 lg:px-16 sticky top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
-      <div className="flex h-20 max-w-7xl items-center justify-between ">
+    <header className=" sticky top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
+      <div className="flex h-20 grid-pattern  items-center justify-between ">
 
         {/* LOGO */}
         <Link
           to="/"
           className="relative z-50 text-xl font-black tracking-tight text-foreground sm:text-2xl"
         >
-          Siyanet Getahun
+          Siyanet
         </Link>
 
         {/* DESKTOP NAV */}
@@ -52,12 +52,12 @@ export default function Header() {
         </nav>
 
         {/* MOBILE ACTIONS */}
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex items-center gap-4 md:hidden z-50">
           <ThemeToggle />
 
           <button
             onClick={() => setIsOpen((prev) => !prev)}
-            className="relative z-50 flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card/50 backdrop-blur-xl"
+            className="relative  flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-card/50 backdrop-blur-xl"
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -65,7 +65,7 @@ export default function Header() {
 
         {/* MOBILE MENU */}
         <div
-          className={`fixed inset-0 transition-all duration-300 md:hidden ${
+          className={`fixed  inset-0 transition-all duration-300 md:hidden ${
             isOpen
               ? "pointer-events-auto opacity-100"
               : "pointer-events-none opacity-0"
@@ -79,7 +79,7 @@ export default function Header() {
 
           {/* MENU PANEL */}
           <div
-            className={`absolute right-0 top-0 flex h-screen w-[280px] flex-col border-l border-border bg-background  transition-transform duration-300 ${
+            className={`absolute right-0 top-0 flex h-screen w-[150px] text-center flex-col border-l border-border bg-background  transition-transform duration-300 ${
               isOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >

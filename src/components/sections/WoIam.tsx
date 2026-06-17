@@ -9,7 +9,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl font-black tracking-tight text-foreground sm:text-5xl text-center lg:text-left"
+            className="text-4xl font-black tracking-tight text-foreground sm:text-5xl text-center "
           >
             Who I Am
           </motion.h2>

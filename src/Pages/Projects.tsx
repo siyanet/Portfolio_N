@@ -1,15 +1,16 @@
 // src/pages/Projects.tsx
 
-import Header from "../components/layout/Header";
 import ProjectCard from "../components/ui/ProjectCard";
 import { motion } from "framer-motion";
 import { projects } from "../data/projects";
+import PageLayout from "../components/layout/PageLayout";
 
 export default function Projects() {
   return (
-    <section className="w-full  grid-pattern">
-        <Header/>
-      <div className=" px-10 lg:px-15">
+   <PageLayout>
+     <section className="w-full">
+      
+      <div >
 
         {/* HEADER */}
         <div className="">
@@ -17,7 +18,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl font-black tracking-tight text-foreground sm:text-5xl text-center lg:text-left"
+            className="text-xl font-black tracking-tight text-foreground sm:text-3xl text-center lg:text-left"
           >
             Portfolio
           </motion.h2>
@@ -41,11 +42,13 @@ export default function Projects() {
               title={project.title}
               slug={project.slug}
               images={project.images}
+              type = {project?.type}
             />
           ))}
         </div>
 
       </div>
     </section>
+   </PageLayout>
   );
 }

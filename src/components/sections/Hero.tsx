@@ -84,7 +84,8 @@ const floatingIcons: FloatingIcon[] = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden grid-pattern px-6 py-16 lg:min-h-[calc(100vh-80px)] lg:px-16">
+   
+     <section className="relative overflow-hidden px-6 py-16 lg:min-h-[calc(100vh-80px)] lg:px-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-20 lg:grid-cols-2">
          <div className="relative flex items-center justify-center">
           

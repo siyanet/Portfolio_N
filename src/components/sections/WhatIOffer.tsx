@@ -37,15 +37,15 @@ const offerings = [
 
 export default function WhatIOffer() {
   return (
-    <section className="w-full py-28 grid-pattern">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="w-full py-5">
+      <div className=" ">
 
         {/* HEADER */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl font-black text-foreground"
+          className="text-4xl text-center font-black text-foreground"
         >
           What I Offer
         </motion.h2>
