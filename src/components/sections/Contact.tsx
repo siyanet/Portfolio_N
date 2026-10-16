@@ -134,37 +134,7 @@ ${form.message}
             </div>
 
             {/* SOCIAL LINKS */}
-            <div className="flex gap-4">
-
-              <a
-                href="https://github.com/siyanet"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub"
-                className="rounded-xl border border-border bg-card/40 p-4 transition hover:bg-card/60"
-              >
-                <SiGithub className="text-2xl text-foreground" />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/siyanet-getahun-5b7734287/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="rounded-xl border border-border bg-card/40 p-4 transition hover:bg-card/60"
-              >
-                <FaLinkedinIn className="text-2xl text-foreground" />
-              </a>
-
-              <a
-                href="mailto:siyangetahunw@gmail.com"
-                aria-label="Email"
-                className="rounded-xl border border-border bg-card/40 p-4 transition hover:bg-card/60"
-              >
-                <SiGmail className="text-2xl text-foreground" />
-              </a>
-
-            </div>
+          
           </motion.div>
         </div>
       </div>

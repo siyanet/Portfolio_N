@@ -23,35 +23,22 @@ type Certificate = {
 
 const experiences: Experience[] = [
   {
-    role: "Full Stack Software Engineer",
-    company: "Swenetix (formerly Addis Software)",
-
+    role: "Full-Stack Software Engineer",
+    company: "Swentix (formerly Addis Software)",
     description:
-      "Contributing to scalable multi-product systems including an electric mobility platform. Developing and maintaining full-stack applications integrating APIs, improving system performance, and collaborating with cross-functional teams on core product features and architecture decisions.",
+      "Building an electric mobility ecosystem that connects drivers, battery-swapping stations, and distributors. Developing admin dashboards and mobile applications, integrating APIs and IoT-powered tracking, and improving real-time workflows for managing drivers, swap stations, batteries, and operations across multiple products.",
   },
-
   {
-    role: "Full Stack Software Engineer",
+    role: "Full-Stack Software Engineer",
     company: "Seamless Technology",
-
     description:
-      "Worked on large-scale health and public-sector data platforms. Refactored OpenIMIS modules to improve maintainability, aligned frontend-backend API contracts, and contributed to NHDD platform UI consistency, validation workflows, and performance optimization.",
+      "Working on healthcare platforms that support health insurance operations and national health data management. Customized and refactored OpenIMIS modules for client needs and contributed to the National Health Data Dictionary (NHDD), building backend APIs, implementing role-based access control, and improving data management workflows for large-scale health information.",
   },
-
   {
     role: "Frontend Developer & UI/UX Designer",
     company: "Kuraz Tech",
-
     description:
-      "Built a full restaurant management system using React, Redux, and Tailwind CSS. Developed reusable UI components, responsive layouts, and scalable frontend architecture. Recognized for strong UI/UX contributions and frontend implementation quality.",
-  },
-
-  {
-    role: "Software Developer Intern",
-    company: "Tria PLC",
-
-    description:
-      "Supported QA processes for a Learning Management System. Performed manual and exploratory testing, identified bugs, and contributed to improving system stability and usability through structured feedback loops.",
+      "Designed and developed intuitive interfaces for ERP systems, restaurant management software, and SaaS applications. Built responsive dashboards, reusable React components, and consistent user workflows using React, Redux, and Tailwind CSS. Recognized for UI/UX design excellence and frontend implementation, contributing to user-friendly experiences across business applications.",
   },
 ];
 

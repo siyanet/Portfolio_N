@@ -4,23 +4,22 @@ import Hero from "../components/sections/Hero";
 import TechStack from "../components/sections/TechStack/TechStack";
 import WhatIOffer from "../components/sections/WhatIOffer";
 import About from "../components/sections/WoIam";
-
+import Experience from "../components/sections/Experience";
+import SelectedProjects from "../components/sections/SelectedProjects";
 
 const Home = () => {
   return (
     <PageLayout>
-    
-        <div>
-             <Hero />
-        <About/>
-        <TechStack/>
-        <WhatIOffer/>
-        <Contact/>
-
-        </div>
-        </PageLayout>
-       
-  
+      <div>
+        <Hero />
+        <About />
+        <Experience />
+        <SelectedProjects />
+        <TechStack />
+        <WhatIOffer />
+        <Contact />
+      </div>
+    </PageLayout>
   );
 };
 

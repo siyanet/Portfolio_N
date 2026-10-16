@@ -17,6 +17,8 @@ import {
 } from "../../assets/svg";
 import { Link } from "react-router-dom";
 import profilePhoto1 from "../../assets";
+import { SiGithub, SiGmail } from "react-icons/si";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 type FloatingIcon = {
   src: string;
@@ -218,21 +220,69 @@ export default function Hero() {
             and production-ready applications through modern frontend
             engineering and reliable backend development.
           </motion.p>
+          <div className="mt-8 grid w-full grid-cols-3 gap-3">
+  {[
+    { value: "5+", label: "Production apps" },
+    { value: "3+", label: "Companies" },
+    { value: "4", label: "Product domains" },
+  ].map((stat) => (
+    <div
+      key={stat.label}
+      className="rounded-2xl border border-border bg-card/40 p-4 text-center backdrop-blur-xl"
+    >
+      <p className="text-2xl font-black text-foreground sm:text-3xl">
+        {stat.value}
+      </p>
+      <p className="mt-1 text-xs text-muted sm:text-sm">{stat.label}</p>
+    </div>
+  ))}
+</div>
 
           {/* BUTTONS */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-end"
-          >
-            <Link
-              to="/projects"
-              className="rounded-2xl bg-foreground px-7 py-4 text-sm font-semibold text-background transition duration-300 hover:-translate-y-1"
-            >
-              View Projects
-            </Link>
-          </motion.div>
+        <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.4 }}
+  className="mt-10 flex w-full flex-col items-center justify-between gap-6 lg:flex-row"
+>
+
+
+  <div className="flex gap-4">
+    <a
+      href="https://github.com/siyanet"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+      className="rounded-xl border border-border bg-card/40 p-4 transition hover:bg-card/60"
+    >
+      <SiGithub className="text-2xl text-foreground" />
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/siyanet-getahun-5b7734287/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+      className="rounded-xl border border-border bg-card/40 p-4 transition hover:bg-card/60"
+    >
+      <FaLinkedinIn className="text-2xl text-foreground" />
+    </a>
+
+    <a
+      href="mailto:siyangetahunw@gmail.com"
+      aria-label="Email"
+      className="rounded-xl border border-border bg-card/40 p-4 transition hover:bg-card/60"
+    >
+      <SiGmail className="text-2xl text-foreground" />
+    </a>
+  </div>
+    <Link
+    to="/projects"
+    className="rounded-2xl bg-foreground px-7 py-4 text-sm font-semibold text-background transition duration-300 hover:-translate-y-1"
+  >
+    View Selected Projects
+  </Link>
+</motion.div>
         </div>
 
         {/* PROFILE + ICONS */}
