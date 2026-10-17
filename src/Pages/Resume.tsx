@@ -86,6 +86,7 @@ export default function Resume() {
 
           <a
             href="/Siyanet-Getahun-Resume.pdf"
+            
             download
             className="rounded-lg border px-4 py-2 text-sm font-medium transition hover:bg-muted"
           >
